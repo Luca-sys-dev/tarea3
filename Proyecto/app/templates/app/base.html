@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/styles.css' %}"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand class1" href="{% url 'lista_agentes' %}">Agentes</a>
+                <a class="navbar-brand class1" href="{% url 'lista_vehiculos' %}">Vehiculos</a>
+                <a class="navbar-brand class1" href="{% url 'lista_consecionarios' %}">Consecionarios</a>
+                <a class="navbar-brand class1" href="{% url 'agente_form' %}">Ingresar Agentes</a>
+                <a class="navbar-brand class1" href="{% url 'vehiculo_form' %}">Ingresar Vehiculos</a>
+                <a class="navbar-brand class1" href="{% url 'consecionario_form' %}">Ingresar Consecionarios</a>
+                <a class="navbar-brand class1" href="{% url 'buscar_agentes' %}">Buscar Agentes</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    
+</body>
+</html>

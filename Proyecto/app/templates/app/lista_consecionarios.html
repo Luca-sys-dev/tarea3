@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+Lista de Consecionarios
+
+{% endblock %}
+
+{% block content %}
+<h2>CONSECIONARIOS</h2>
+<ul>
+    {% for c in consecionarios %}
+    <li>{{ c.nombre }} - {{ c.direccion }} - {{ c.marca }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

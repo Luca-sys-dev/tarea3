@@ -1,0 +1,22 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+Buscar un Agente
+
+{% endblock %}
+
+{% block content %}
+<body> 
+    <h1>Buscar Agente</h1> 
+    <form action="/buscar_agentes/" method="post"> {% csrf_token %} {{ form.as_p }} <button type="submit">Enviar</button> </form> 
+    <h1>RESULTADOS</h1>
+    <ul>
+        {% if resultados %}
+            {% for r in resultados %}
+                <li>{{ r.nombre }} {{ r.apellido }} {{ r.edad }} {{ r.dni }} {{ r.sueldo }}</li>
+            {% endfor %}
+        {% else %}
+        <li>No se encontraron resultados.</li>
+        {% endif %}
+    </ul>
+{% endblock %}

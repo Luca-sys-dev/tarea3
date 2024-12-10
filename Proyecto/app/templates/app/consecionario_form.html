@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+Ingresar un Consecionario
+
+{% endblock %}
+
+{% block content %}
+<body> 
+    <h1>Agregar Consecionario</h1> 
+    <form action="/consecionario_form/" method="post"> {% csrf_token %} {{ form.as_p }} <button type="submit">Enviar</button> </form> 
+</body>
+{% endblock %}

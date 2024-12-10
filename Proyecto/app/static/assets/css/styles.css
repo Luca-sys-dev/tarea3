@@ -1,0 +1,12 @@
+* {
+    background-color: rgb(77, 82, 100);
+}
+
+.class1{
+    text-decoration: none;
+    color:rgb(15, 136, 73);
+}
+
+.class1:hover{
+    color:red;
+}

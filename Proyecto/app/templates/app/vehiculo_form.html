@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+Ingresar un Vehiculo
+
+{% endblock %}
+
+{% block content %}
+<body> 
+    <h1>Agregar Vehiculo</h1> 
+    <form action="/vehiculo_form/" method="post"> {% csrf_token %} {{ form.as_p }} <button type="submit">Enviar</button> </form> 
+</body>
+{% endblock %}
